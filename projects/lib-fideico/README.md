@@ -1,6 +1,6 @@
 # LibFideico
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+Libreria para conexion con los servicios REST del módulo de Fideicomiso
 
 ## Code scaffolding
 
@@ -9,16 +9,34 @@ Run `ng generate component component-name --project lib-fideico` to generate a n
 
 ## Build
 
-Run `ng build lib-fideico` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build lib-fideico` to build the project. The build artifacts will be stored in the `@laranda/` directory.
 
 ## Publishing
 
-After building your library with `ng build lib-fideico`, go to the dist folder `cd dist/lib-fideico` and run `npm publish`.
+After building your library with `ng build lib-fideico`, go to the dist folder `cd @laranda/lib-fideico` and run `npm publish`.
 
-## Running unit tests
+## Instalación
 
-Run `ng test lib-fideico` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm i @laranda/lib-fideico
 
-## Further help
+## Configurar Archivo app.module.ts
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Después de instalar la librería importamos la clase LibFideicoModule
+
+import { LibFideicoModule } from '@laranda/lib-fideico';
+Se coloca en el imports LibFideicoModule
+
+Ejemplo
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    LibFideicoModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
